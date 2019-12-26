@@ -1,8 +1,8 @@
 import { put, takeEvery } from 'redux-saga/effects'
 import { delay, call } from "@redux-saga/core/effects";
-import * as actions from "../Redux/taskReducer";
+import * as actions from "../Redux/indicatorReducer";
 import {fetchMoneyFromBackend} from "../api/api";
-import {TYPES} from "../Redux/taskReducer";
+import {TYPES} from "../Redux/indicatorReducer";
 
 
 //const getMoney = state => state.money;

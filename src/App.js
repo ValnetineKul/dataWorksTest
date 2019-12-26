@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {connect} from "react-redux";
-import { startPollingAction } from "./Redux/taskReducer";
+import { startPollingAction } from "./Redux/indicatorReducer";
 import MainBox from "./Components/mainBox/mainBox";
 
 class App extends React.Component {

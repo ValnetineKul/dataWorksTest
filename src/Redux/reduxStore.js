@@ -1,5 +1,5 @@
 import {combineReducers, createStore, applyMiddleware} from 'redux';
-import progressBarReducer from './taskReducer';
+import progressBarReducer from './indicatorReducer';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import createSagaMiddleware from 'redux-saga';
 import {watchGetMoney} from "../saga/pollingSaga";

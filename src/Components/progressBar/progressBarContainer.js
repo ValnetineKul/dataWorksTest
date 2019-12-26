@@ -1,5 +1,5 @@
 import React from 'react';
-import * as ACTIONS from '../../Redux/taskReducer';
+import * as ACTIONS from '../../Redux/indicatorReducer';
 import { connect } from "react-redux";
 import ProgressBar from "./progressBar";
 
