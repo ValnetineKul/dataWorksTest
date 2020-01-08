@@ -1,3 +1,4 @@
+import update from 'react-addons-update';
 
 export const TYPES = {
   SET_MONEY: 'SET_MONEY',
@@ -5,37 +6,53 @@ export const TYPES = {
 };
 
 const initialState = {
-  money: null,
-  goalMoney: 15,
-  isFinished: false
-};
-
-const progressBarReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case TYPES.SET_MONEY: {
-      return {
-        ...state,
-        money: state.money + action.money,
-      };
-    }
-    case TYPES.START_POLLING: {
-      return state;
-    }
-    default:
-      return state;
+  uglyTree: {
+    "Name": "Table",
+    "Children": [{
+      "VerticalSpan": 1,
+      "Color": "Orange",
+      "Value": "1",
+      "Children": [{
+        "VerticalSpan": 1,
+        "Color": "Green",
+        "Value": "4",
+        "Children": [{
+          "VerticalSpan": 1,
+          "Color": "Purple",
+          "Value": "7",
+          "Children": []
+        }]
+      },
+        {
+          "Children": [
+            {"VerticalSpan": 1, "Color": "Purple", "Value": "8", "Children": []}
+          ]
+        }
+      ]
+    },
+      {"VerticalSpan": 1, "Color": "Green", "Value": "5"},
+      {"VerticalSpan": 1, "Color": "Orange", "Value": "2",
+        "Children": [{"VerticalSpan": 2, "Color": "Green", "Value": "6", "Children": []}
+        ]
+      },
+      {
+        "VerticalSpan": 2,
+        "Color": "Orange",
+        "Value": "3",
+        "Children": [
+          {"VerticalSpan": 1, "Color": "Purple", "Value": "9", "Children": []},
+          {"VerticalSpan": 1, "Color": "Purple", "Value": "10", "Children": []}
+        ]
+      }
+    ]
   }
 };
-
-export const startPollingAction = () => (
-  {type: TYPES.START_POLLING}
-);
-
-
-export const setMoneyAction = (money) => {
-  console.log('setMoneyAction');
-  return(
-  {type: TYPES.SET_MONEY, money}
-  )
+const newInitialState = () => update(initialState, {uglyTree: {Name: {$set: 'uglyTree'}}});
+newInitialState();
+console.log(newInitialState(), 'i0909090')
+const tableReducer = (state = initialState, action) => {
+  return state;
 };
 
-export default progressBarReducer;
+
+export default tableReducer;
