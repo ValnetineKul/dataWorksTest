@@ -1,0 +1,10 @@
+.table {
+    background: floralwhite;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: auto auto auto auto auto auto;
+    padding: 10px;
+}
+
+.table button{
+}

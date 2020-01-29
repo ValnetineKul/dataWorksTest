@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
-import Table from "./table/Table";
+import Parent from "./Table2/Parent";
 
 class App extends React.Component {
+
+
+
   render() {
     return (
       <div className="App">
-        <Table />
+        <Parent />
       </div>
     );
   }

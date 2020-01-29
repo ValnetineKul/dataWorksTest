@@ -1,5 +1,5 @@
 import {combineReducers, createStore} from 'redux';
-import tableReducer from './indicatorReducer';
+import tableReducer from './Reducers/tableReducer';
 import {composeWithDevTools} from 'redux-devtools-extension';
 
 
